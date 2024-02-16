@@ -1,0 +1,98 @@
+<!-- parcours.html -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Parcours</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="text-styles.css">
+    <script>
+        function afficherFormulaire() {
+            var formulaire = document.getElementById("formulaire");
+            formulaire.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parcours.html">Parcours</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="#" onclick="afficherFormulaire()">Contactez-moi</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section>
+            <div id="formulaire" style="display:none;">
+                <h2>Contactez-moi</h2>
+                <form action="mailto:panauld.fankam@gmail.com" method="post" enctype="text/plain">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+            <h2>Parcours d'études</h2>
+            <p>Je suis Panauld Fankam, un finissant en AEC (Attestation d'études collégiales) en Programmation et applications Internet de l'Institut Supérieur d’Informatique à Montréal.</p> 
+               <p> Avant cela, j'ai obtenu une Licence en Réseaux et Télécommunication à l'Institut Universitaire de Technologie (IUT) de Douala au Cameroun, en 2021, équivalent au Baccalauréat au Canada.</p>
+                <p> Précédemment, en 2019, j'ai obtenu un BTS en Télécommunication à l'Institut Universitaire de la Côte (IUC) de Douala. Ces parcours m'ont permis d'acquérir des compétences variées dans les domaines des technologies de l'information, de la communication et du développement logiciel.
+            </p>
+        </section>
+        <section>
+            <h2>Parcours professionnel</h2>
+            <p>Je suis Panauld Fankam, un professionnel polyvalent avec une expérience diversifiée dans différents domaines. Voici un aperçu de mon parcours professionnel :</p>
+
+              <p>  Concierge
+                Centre de services scolaire des Mille-Îles (Québec)
+                Septembre 2023 – Présent
+                En tant que concierge, je suis responsable de diverses tâches liées à l'entretien et à la gestion des installations scolaires, démontrant ainsi ma capacité à travailler de manière autonome et à assurer un environnement propre et sécuritaire.</p>
+                <p>
+                Équipier
+                McDonald, Sainte-Marthe-sur-le-Lac (Québec)
+                Décembre 2022 - Présent
+                Dans ce rôle, je travaille au sein d'une équipe dynamique pour offrir un service de qualité aux clients, tout en respectant les normes de l'entreprise en matière de service et d'hygiène.
+                </p>
+                <p>
+                Agent Commercial
+                Express course Ndokoti, Douala
+                Décembre 2021 - Août 2022
+                Mon expérience en tant qu'agent commercial m'a permis de développer mes compétences en vente et en relation client, tout en travaillant dans un environnement dynamique et exigeant.
+            </p>
+            <p>
+                Technicien Télécom (stage)
+                ASECNA, Douala
+                Septembre 2021- Novembre 2021
+                Au cours de ce stage, j'ai acquis une expérience pratique dans le domaine des télécommunications, en participant à la maintenance et à la gestion des réseaux, ce qui a renforcé mes compétences techniques.
+            </p>
+            <p>
+                Technicien Réseau (stage)
+                CAMUSAT, Douala
+                Janvier 2021 – Avril 2021
+                Durant ce stage, j'ai eu l'occasion de travailler sur la configuration et la gestion des réseaux, ce qui m'a permis d'approfondir mes connaissances en infrastructure réseau.
+                </p>
+                <p>En dehors de mon parcours professionnel, je possède également des connaissances en entreprenariat, ayant dirigé un comptoir de vente de produits divers. Mon expérience dans ce domaine m'a permis de développer des compétences en gestion d'entreprise, en marketing et en prise de décision stratégique.</p>
+                
+                <p>Je suis motivé, polyvalent et prêt à relever de nouveaux défis. Mon parcours diversifié démontre ma capacité à m'adapter rapidement à de nouveaux environnements et à réussir dans des rôles variés.
+                
+                Merci de prendre le temps de découvrir un peu plus sur moi.</p>
+                
+                </p>
+        </section>
+    </div>
+    <footer>
+        <p>Copyright &copy; 2024, Panauld Fankam<br>
+
+            213 Rue de la tourbière, Sainte-Marthe-sur-le-Lac, Québec, J0N 1P0<br>
+            <a href="tel:+15143780648">+1 514 378 0648</a>
+        </p>
+    </footer>
+</body>
+</html>

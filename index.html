@@ -1,0 +1,87 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="text-styles.css">
+    
+    <script>
+        function afficherFormulaire() {
+            var formulaire = document.getElementById("formulaire");
+            formulaire.style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="image/mac.jpg" alt="photo" />
+            <h1>Mon Portfolio</h1>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parcours.html">Parcours</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="#" onclick="afficherFormulaire()">Contactez-moi</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section>
+            <article>
+                
+            <h2>À propos de moi</h2>
+                <p>
+                    Je suis Panauld Fankam, un passionné de technologie et de rénovation, animé par une soif constante de connaissances et de défis. Mon parcours académique a débuté à l'Institut Universitaire de Technologie de Douala, au Cameroun, où j'ai obtenu un diplôme de licence en technologie en réseaux et télécommunications. Cette formation, équivalente à un baccalauréat au Canada, m'a fourni une base solide dans le domaine des communications et des technologies de l'information.<br>
+    
+    Cependant, mon appétit pour l'apprentissage ne s'est pas arrêté là. Désireux d'explorer davantage le monde de la programmation et de la technologie Internet, je me suis engagé dans une formation en AEC (Attestation d'études collégiales) dans ce domaine. Cette décision reflète ma volonté constante de rester à jour avec les avancées technologiques et de développer mes compétences pour répondre aux défis du monde numérique en constante évolution.</p>
+    <img src="image/Fkpd.jpg" alt="photo de moi">
+    
+    <p>En dehors de ma passion pour la technologie, je suis également un entrepreneur dans l'âme. J'ai dirigé un comptoir de vente de chaussures, de vêtements et de sous-vêtements pour dames, démontrant ainsi mon esprit d'entreprise et ma capacité à gérer une entreprise prospère. Actuellement, je travaille sur la relance de cette entreprise, cherchant à l'étendre et à la faire prospérer partout où je me trouve.</p>
+    
+            </article>
+            <article>
+                Mon parcours m'a inculqué des compétences variées, allant de la technologie à la gestion d'entreprise, en passant par l'entrepreneuriat. Je suis convaincu que cette combinaison unique d'expériences me permettra de relever efficacement les défis professionnels qui se présenteront à moi.<br>
+
+Je suis enthousiaste à l'idée de continuer à apprendre, à innover et à contribuer positivement à tout projet ou entreprise auquel je participerai. Merci de prendre le temps de découvrir un peu plus sur moi.
+
+            </p>
+            </article>
+            <p>
+
+            <p>Vous pouvez me contacter en cliquant <a href="mailto:panauld.fankam@gmail.com">ici</a>.</p>
+            <p>Suivez-moi sur :</p>
+            <ul class="social-icons">
+                <li><a href="https://twitter.com/votreprofil" target="_blank"><img src="https://example.com/twitter.png" alt="Twitter"></a></li>
+                <li><a href="https://www.linkedin.com/in/votreprofil" target="_blank"><img src="https://example.com/linkedin.png" alt="LinkedIn"></a></li>
+                <li><a href="https://github.com/panauld" target="_blank"><img src="https://example.com/github.png" alt="GitHub"></a></li>
+            </ul>
+            <p>Contactez-moi au <a href="tel:+15143780648">+1 514 378 0648</a>.</p> <!-- Lien pour lancer un appel -->
+            <div id="formulaire" style="display:none;">
+                <h2>Contactez-moi</h2>
+                <form action="mailto:panauld.fankam@gmail.com" method="post" enctype="text/plain">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>Copyright &copy; 2024, Panauld Fankam<br>
+            213 Rue de la tourbière, Sainte-Marthe-sur-le-Lac, Québec, J0N 1P0<br>
+            <a href="tel:+15143780648">+1 514 378 0648</a>
+        </p>
+    </footer>
+</body>
+</html>

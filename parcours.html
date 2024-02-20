@@ -18,28 +18,47 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="parcours.html">Parcours</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="#" onclick="afficherFormulaire()">Contactez-moi</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section>
-            <div id="formulaire" style="display:none;">
-                <h2>Contactez-moi</h2>
-                <form action="mailto:panauld.fankam@gmail.com" method="post" enctype="text/plain">
-                    <label for="nom">Nom :</label>
-                    <input type="text" id="nom" name="nom" required>
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <button type="submit">Envoyer</button>
-                </form>
+            <input type="checkbox" />
+
+            <div class="mobile-menu">
+                <span> </span>
+                <span> </span>
+                <span> </span>
             </div>
+
+            <div class="desktop-menu">
+                <span>
+                    <a href="index.html">Accueil</a>
+                </span>
+                <span>
+                    <a href="parcours.html#informations">Parcours</a>
+                </span>
+                <span>
+                    <a href="projets.html#projets">Projets</a>
+                </span>
+                <span>
+                    <a href="contact.html#contact-section">Contactez-moi</a>
+                </span>
+
+            </div>
+            
+            
+            
+            
+            <ul>
+                <li class="lien"><a href="index.html">Accueil</a></li>
+                <li class="lien"><a href="parcours.html#informations">Parcours</a></li>
+                <li class="lien"><a href="projets.html#projets">Projets</a></li>
+                <li class="lien"><a href="contact.html#contact-section">Contactez-moi</a></li>
+            </ul>
+
+        </nav>
+    
+    </header>
+    <main>
+    <div class="parcours">
+        <section>
+            
             <h2>Parcours d'études</h2>
             <p>Je suis Panauld Fankam, un finissant en AEC (Attestation d'études collégiales) en Programmation et applications Internet de l'Institut Supérieur d’Informatique à Montréal.</p> 
                <p> Avant cela, j'ai obtenu une Licence en Réseaux et Télécommunication à l'Institut Universitaire de Technologie (IUT) de Douala au Cameroun, en 2021, équivalent au Baccalauréat au Canada.</p>
@@ -85,8 +104,10 @@
                 Merci de prendre le temps de découvrir un peu plus sur moi.</p>
                 
                 </p>
+                <p>Téléchargez mon CV : <a href="../panauld_dride.github.io/documents/CV_Stage_panauld_dride.pdf" download="Panauld_Fankam_CV.pdf">CV PDF</a></p>
         </section>
     </div>
+</main>
     <footer>
         <p>Copyright &copy; 2024, Panauld Fankam<br>
 
@@ -94,5 +115,25 @@
             <a href="tel:+15143780648">+1 514 378 0648</a>
         </p>
     </footer>
+    <!-- Ajoutez le code JavaScript pour le défilement fluide ici -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            for (const link of links) {
+                link.addEventListener("click", clickHandler);
+            }
+            
+            function clickHandler(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href");
+                const targetElement = document.querySelector(targetId);
+                const yOffset = -100; // Ajustez ceci selon votre besoin
+                
+                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
+        });
+    </script>
 </body>
 </html>

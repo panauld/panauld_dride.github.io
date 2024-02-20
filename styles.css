@@ -1,152 +1,292 @@
-/* styles.css */
-
-@font-face {
-    font-family: 'sofiaregular';
-    src: url('../fonts/sofia-regular-webfont.eot');
-    src: url('../fonts/sofia-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/sofia-regular-webfont.woff2') format('woff2'), url('../fonts/sofia-regular-webfont.woff') format('woff'), url('../fonts/sofia-regular-webfont.ttf') format('truetype'), url('../fonts/sofia-regular-webfont.svg#sofiaregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-header>div {
-    /* Seulement pour permettre le positionnement absolute du h1. */
-    position: relative;
-}
-
-header>div img {
-    /* Utilise 100% de la largeur et conserve le ratio de l'image. */
-    width: 100%;
-   
-}
-
-h1 {
-    font-size: 2.5em;
-   
-    position: absolute;
-    width: 100%;
-    top: 25%;
-    /* IE fallback */
-    background-color: lightblue;
-    background-color: rgba(173, 216, 230, 0.8);
-}
-
+/* Styles généraux */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    width: 960px;
+    margin: 0 auto;
+    background: #f2e8e6;
+    background: radial-gradient(ellipse at center, #f2e8e6 0%, #10b3e0 100%);
+    perspective: 1000px; /* Ajout de perspective pour les transformations 3D */
 }
 
-header {
-    
-    color: #fff;
-    padding: 05px;
-}
-
-
-header nav ul {
-    display: flex;
-    /* on élimine les puces sur tous les ul */
-    list-style: none;
-    /* on élimine la marge intérieure par défaut des ul */
-    padding-left: 0;
-    background-color: aqua;
-    margin: 40px;
-}
-
-.lien {
-    background-color: lightgrey;
-    flex-basis: 100%;
-    flex-grow: 1;
-    /*
-        flex: 1 1 100%; ou tout les propriétée:  flex-grow: 1 / flex-shrink: 1 / flex-basis: 100%
-        Tous les éléments ont la même largeur et la somme de leurs largeurs est équivalente à la largeur totale du parent.
-    */
-    text-align: center;
-   
-   
-}
-
-nav ul li a, nav ul li a:visited, nav ul li a:hover, nav ul li a:active {
-    /* on élimine le soulignage des liens */
-    text-decoration: none;
-    /* le lien occupe la totalité du li en largeur */
-    width: 100%;
-    /* pour que le lien occupe la largeur et la hauteur prédéfinies */
-    display: block;
-    /* pour ajouter des marges intérieures et agrandir le block du lien */
-    padding: 20px;
-}
-
-nav ul li a:hover {
-    background-color: grey;
-}
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-   padding: 20px;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Responsive Styles */
-
-@media screen and (max-width: 600px) {
-    .container {
-        max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    header {
-        padding: 10px;
-    }
-    
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
-}
-.langages {
-    margin-top: 20px;
-    overflow-y: auto;
-    max-height: 200px; /* Définir la hauteur maximale de la section des langages */
-}
-.langages img {
-    width: 100px; /* Ajuster la taille des images des langages */
-    margin-right: 10px;
-}
-.langages ul {
-    list-style-type: none;
-    padding: 0;
+body .container {
     margin: 0;
+    padding: 0;
+    color: rgb(15, 17, 15);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../panauld_dride.github.io/image/mac.jpg);
+    background-attachment: fixed;
+    transform-style: preserve-3d; /* Indique aux enfants de maintenir leur position 3D */
 }
-.langages ul li {
+.container article{
+    
+    text-align: justify;
+}
+#information{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles pour la section de contact */
+.contact-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transform: rotateX(10deg) rotateY(10deg); /* Rotation 3D */
+}
+
+.contact-section h1 {
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    transform: rotateX(10deg) rotateY(10deg); /* Rotation 3D */
+}
+
+.contact-section form {
+    margin-top: 20px;
+}
+
+.contact-section label {
+    display: block;
     margin-bottom: 5px;
 }
 
-@media screen and (max-width: 480px) {
-    nav ul {
-        text-align: center;
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-section button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-section button:hover {
+    background-color: #45a049;
+}
+
+
+/* Styles pour la barre de navigation, le pied de page, etc. */
+/* Ajoutez vos styles pour la navigation, le pied de page, etc. ici */
+
+/* Styles pour la barre de navigation */
+header {
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    transform: rotateX(5deg); /* Rotation 3D */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Styles pour le pied de page */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    transform: rotateX(5deg); /* Rotation 3D */
+}
+
+/* Styles pour la section de parcours */
+.parcours {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    min-height: 800px;
+    background: rgba(21, 82, 97, 1);
+    background: linear-gradient(to bottom, rgba(21, 82, 97, 1) 0%, rgba(211, 231, 237, 1) 100%);
+    transform: rotateY(5deg); /* Rotation 3D */
+}
+
+.parcours h2 {
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    transform: rotateY(5deg); /* Rotation 3D */
+}
+
+.parcours p {
+    margin-bottom: 15px;
+}
+
+/* Styles pour la section de projets */
+.projets {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transform: rotateX(10deg) rotateY(-10deg); /* Rotation 3D */
+}
+
+.projets figure {
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.projets img {
+    width: 100%;
+    height: auto;
+}
+
+.projets figcaption {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.projets section {
+    margin-bottom: 40px;
+}
+
+.langages {
+    margin-top: 20px;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+/* Styles pour la section de langages de programmation */
+.langages {
+    margin-top: 20px;
+}
+
+.langages h2 {
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    transform: rotateX(5deg) rotateY(5deg); /* Rotation 3D */
+}
+
+.langages table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.langages td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.langages tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.langages tr:hover {
+    background-color: #ddd;
+}
+
+/* Styles pour les écrans larges */
+@media screen and (min-width: 768px) {
+    /* Pour les écrans de taille moyenne et plus grands */
+
+    /* Styles pour la barre de navigation */
+    header nav ul {
+        display: flex;
+        justify-content: flex-end; /* Alignement à droite */
     }
 
-    nav ul li {
-        display: block;
+    header nav ul li {
+        margin-right: 0;
+        margin-left: 20px;
+    }
+
+    /* Styles pour la section de contact, de parcours et de projets */
+    .contact-section,
+    .parcours,
+    .projets {
+        max-width: 80%;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        transform: rotateX(5deg) rotateY(5deg); /* Rotation 3D */
+    }
+    .main {
+        padding: 2rem;
+    }
+    
+    .parcours {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    section {
+        flex: 1;
+        margin-right: 2rem;
+    }
+
+    /* Styles pour les formulaires */
+    form {
+        max-width: 500px;
         margin: 0 auto;
+    }
+
+    /* Styles pour les images des projets */
+    .projets figure {
+        width: 30%;
+    }
+}
+
+/* Styles pour les écrans de taille moyenne */
+@media screen and (max-width: 767px) {
+    /* Pour les écrans plus petits */
+
+    /* Styles pour la barre de navigation */
+    header nav {
+        flex-direction: column; /* Alignement vertical */
+        align-items: center; /* Centrer les éléments */
+    }
+
+    header nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Styles pour la section de contact, de parcours et de projets */
+    .contact-section,
+    .parcours,
+    .projets {
+        padding: 15px;
+        transform: rotateX(5deg) rotateY(5deg); /* Rotation 3D */
+    }
+
+    /* Styles pour les images des projets */
+    .projets figure {
+        width: 100%;
     }
 }

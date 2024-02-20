@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos de moi</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assurez-vous d'ajuster le chemin si nécessaire -->
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" />
+
+            <div class="mobile-menu">
+                <span> </span>
+                <span> </span>
+                <span> </span>
+            </div>
+
+            <div class="desktop-menu">
+                <span>
+                    <a href="index.html">Accueil</a>
+                </span>
+                <span>
+                    <a href="parcours.html#informations">Parcours</a>
+                </span>
+                <span>
+                    <a href="projets.html#projets">Projets</a>
+                </span>
+                <span>
+                    <a href="contact.html#contact-section">Contactez-moi</a>
+                </span>
+
+            </div>
+            
+            
+            
+            
+            <ul>
+                <li class="lien"><a href="index.html">Accueil</a></li>
+                <li class="lien"><a href="parcours.html#informations">Parcours</a></li>
+                <li class="lien"><a href="projets.html#projets">Projets</a></li>
+                <li class="lien"><a href="contact.html#contact-section">Contactez-moi</a></li>
+            </ul>
+
+        </nav>
+    
+    </header>
+    <main>
+        <div class="contact-section">
+            <h1>Contactez-moi</h1>
+            <form action="mailto:panauld.fankam@gmail.com" method="post">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required placeholder="Entrez votre nom">
+
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required placeholder="Entrez votre prénom">
+
+                <label for="telephone">Numéro de téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" required
+                    placeholder="Entrez votre numéro de téléphone (10 chiffres)">
+
+                <label for="courriel">Courriel :</label>
+                <input type="email" id="courriel" name="courriel" required placeholder="Entrez votre adresse e-mail">
+
+                <label for="commentaire">Commentaire :</label>
+                <textarea id="commentaire" name="commentaire" rows="4"></textarea>
+
+                <button type="submit">Soumettre</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2024, Panauld Fankam<br>
+            213 Rue de la tourbière, Sainte-Marthe-sur-le-Lac, Québec, J0N 1P0<br>
+            <a href="tel:+15143780648">+1 514 378 0648</a>
+        </p>
+    </footer>
+    <!-- Ajoutez le code JavaScript pour le défilement fluide ici -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            for (const link of links) {
+                link.addEventListener("click", clickHandler);
+            }
+            
+            function clickHandler(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href");
+                const targetElement = document.querySelector(targetId);
+                const yOffset = -100; // Ajustez ceci selon votre besoin
+                
+                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
+        });
+    </script>
+</body>
+</html>

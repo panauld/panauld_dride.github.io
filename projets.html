@@ -8,102 +8,148 @@
     <title>Mes Projets</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="text-styles.css">
-    <style>
-        /* Ajout de styles CSS spécifiques à cette page */
-        .langages {
-            margin-top: 20px;
-            overflow-y: auto;
-            max-height: 200px; /* Définir la hauteur maximale de la section des langages */
-        }
-        .langages img {
-            width: 100px; /* Ajuster la taille des images des langages */
-            margin-right: 10px;
-        }
-    </style>
-    <script>
-        function afficherFormulaire() {
-            var formulaire = document.getElementById("formulaire");
-            formulaire.style.display = "block";
-        }
-    </script>
+    
+    
 </head>
 <body>
     <header>
-       
         <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="parcours.html">Parcours</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="#" onclick="afficherFormulaire()">Contactez-moi</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <section>
-            <div id="formulaire" style="display:none;">
-                <h2>Contactez-moi</h2>
-                <form action="mailto:panauld.fankam@gmail.com" method="post" enctype="text/plain">
-                    <label for="nom">Nom :</label>
-                    <input type="text" id="nom" name="nom" required>
-                    <label for="email">Email :</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">Message :</label>
-                    <textarea id="message" name="message" required></textarea>
-                    <button type="submit">Envoyer</button>
-                </form>
+            <input type="checkbox" />
+
+            <div class="mobile-menu">
+                <span> </span>
+                <span> </span>
+                <span> </span>
             </div>
-            <h2>Projets de groupe</h2>
-            <p>Insérez ici vos projets de groupe réalisés.</p>
-            <!-- Insérez vos projets de groupe ici -->
+
+            <div class="desktop-menu">
+                <span>
+                    <a href="index.html">Accueil</a>
+                </span>
+                <span>
+                    <a href="parcours.html#informations">Parcours</a>
+                </span>
+                <span>
+                    <a href="projets.html#projets">Projets</a>
+                </span>
+                <span>
+                    <a href="contact.html#contact-section">Contactez-moi</a>
+                </span>
+
+            </div>
+            
+            
+            
+            
             <ul>
-                <li>
-                    Boutique en ligne:
-                    <ul>
-                        <li>Gestion login, panier, caisse</li>
-                        <li>Notification commande</li>
-                        <li>Catalogue</li>
-                        <li>Gestion des rabais</li>
-                        <li>Commentaires et évaluations des clients</li>
-                        <li>Newsleter</li>
-                        <li>Simulation de paiement et de l’expédition</li>
-                    </ul>
-                </li>
-                <li>
-                    Gestion de Contacts:
-                    <ul>
-                        <li>Modèle MVC</li>
-                        <li>Application WPF</li>
-                        <li>Bibliothèque de types</li>
-                        <li>Gestion des rôles</li>
-                        <li>Recherche et tri multi-critères</li>
-                    </ul>
-                </li>
+                <li class="lien"><a href="index.html">Accueil</a></li>
+                <li class="lien"><a href="parcours.html#informations">Parcours</a></li>
+                <li class="lien"><a href="projets.html#projets">Projets</a></li>
+                <li class="lien"><a href="contact.html#contact-section">Contactez-moi</a></li>
             </ul>
-            <h2>Projets individuels</h2>
-            <p>Insérez ici vos projets individuels réalisés.</p>
-            <!-- Insérez vos projets individuels ici -->
-        </section>
+
+        </nav>
+    
+    </header>
+
+
+    
+
+    <main>
+      <div class="projets">
+       
+            <figure>
+                <img src="image/Capture d’écran 2024-02-19 141954_vente_de_films.png" alt="Vente Des Films" />
+                <figcaption>Site de vente de films</figcaption>
+                <ul>
+                    <li><a href="https://github.com/panauld/travail_pratique" target="_blank"><img src="https://example.com/github.png" alt="GitHub"></a></li>
+                </ul>
+
+            </figure>
+    
+            <figure>
+                <img src="image/Capture d’écran 2024-02-19 143001_vente_appareils.png" alt="Vente Des Appareils" />
+                <figcaption>Site de ventes des appareils</figcaption>
+                
+                <ul>
+                    <li><a href="https://github.com/panauld/site_vente_appareils" target="_blank"><img src="https://example.com/github.png" alt="GitHub"></a></li>
+                </ul>
+            </figure>
+    
+            <figure>
+                <img src="image/Capture d’écran 2024-02-19 142642_vente_vetements.png" alt="Vente Des Vêtements" />
+                <figcaption>Site de vente des vêtements</figcaption>
+                <ul>
+                    <li><a href="https://github.com/panauld/site_vente_vetement" target="_blank"><img src="https://example.com/github.png" alt="GitHub"></a></li>
+                </ul>
+            </figure>
+    
+            <figure>
+                <img src="image/Capture d’écran 2024-02-19 143140_location_films.png" alt="Location Des Films" />
+                <figcaption>Site de location des films</figcaption>
+                <ul>
+                    <li><a href="https://github.com/panauld/site_location_films" target="_blank"><img src="https://example.com/github.png" alt="GitHub"></a></li>
+                </ul>
+            </figure>
+    
+            <figure>
+                <img src="image/Capture d’écran 2024-02-19 233946_html_css.png" alt="contact" />
+                <figcaption>Page De Contact</figcaption>
+                <ul>
+                    <li><a href="https://github.com/panauld/css_html_page_contact" target="_blank"><img src="https://example.com/github.png" alt="GitHub"></a></li>
+                </ul>
+            </figure>
+    
+            
+     
         <!-- Section pour les langages -->
         <div class="langages">
             <h2>Langages de programmation</h2>
-            <img src="image/Java.png" alt="Java">
-            <img src="image/JavaEE.jpg" alt="Java EE">
-            <img src="image/C.jpg" alt="C">
-            <img src="image/C++.png" alt="C++">
-            <img src="image/C#.png" alt="C#">
-            <img src="image/PHP.png" alt="PHP">
-            <img src="image/JavaScript.png" alt="JavaScript">
-            <img src="image/Android.png" alt="Android">
-            <img src="image/React.png" alt="React">
-            <img src="image/Node.png" alt="Node.js">
+            <table>
+                <tr>
+                    <td>Java</td>
+                    <td>Java EE</td>
+                    <td>C</td>
+                    <td>C++</td>
+                    <td>C#</td>
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                    <td>JavaScript</td>
+                    <td>Android</td>
+                    <td>React</td>
+                    <td>Node.js</td>
+                </tr>
+            </table>
         </div>
+        
     </div>
+</main>
     <footer>
         <p>Copyright &copy; 2024, Panauld Fankam<br>
             213 Rue de la tourbière, Sainte-Marthe-sur-le-Lac, Québec, J0N 1P0<br>
             <a href="tel:+15143780648">+1 514 378 0648</a>
         </p>
     </footer>
+    <!-- Ajoutez le code JavaScript pour le défilement fluide ici -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            for (const link of links) {
+                link.addEventListener("click", clickHandler);
+            }
+            
+            function clickHandler(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href");
+                const targetElement = document.querySelector(targetId);
+                const yOffset = -100; // Ajustez ceci selon votre besoin
+                
+                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
+        });
+    </script>
 </body>
 </html>
